@@ -1,26 +1,3 @@
-//package P_3;
-//
-//public class StrukturList {
-//	private Node HEAD;
-//
-//	public void addTail (int data) {
-//		Node posNode = null, curNode = null;
-//		
-//		Node newNode = new Node(data);
-//		if (isEmpty()) {
-//			HEAD = newNode;
-//		} else {
-//			curNode = HEAD;
-//			while (curNode != null) {
-//				posNode = curNode;
-//				curNode = curNode.getNext();
-//			}
-//			posNode.setNext(newNode);
-//		}
-//	}
-//}
-
-
 package P_3;
 
 public class StrukturList {
@@ -34,20 +11,21 @@ public class StrukturList {
         return HEAD == null; // Mengembalikan true jika list kosong
     }
 
-    public void addTail(int data) {
-        Node newNode = new Node(data);
+    	public void addTail(int data) {
+    	    Node newNode = new Node(data);
 
-        if (isEmpty()) {
-            HEAD = newNode;
-        } else {
-        	
-            Node curNode = HEAD;
-            while (curNode.getNext() != null) { // Iterasi sampai node terakhir
-                curNode = curNode.getNext();
-            }
-            curNode.setNext(newNode);
-        }
-    }
+    	    if (isEmpty()) {
+    	        HEAD = newNode;
+    	    } else {
+    	        Node curNode = HEAD;
+
+    	        while (curNode.getNext() != null) {
+    	            curNode = curNode.getNext();
+    	        }
+
+    	        curNode.setNext(newNode);
+    	    }
+    	}
     
 //    Latihan 4
     public void displayElement() {
